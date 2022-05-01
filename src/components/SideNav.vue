@@ -103,7 +103,7 @@ export default {
 
 .side-btn:hover {
   color: rgb(221, 216, 216);
-  background-color: rgba(47, 48, 48, 0.3);
+  /* background-color: rgba(47, 48, 48, 0.3); */
   padding-left: 10px;
   border-radius: 20px;
 }
