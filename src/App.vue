@@ -34,5 +34,6 @@ body {
   color: rgb(63, 61, 61);
   font-size: 24px;
   margin-top: 10px;
+  text-align: center;
 }
 </style>

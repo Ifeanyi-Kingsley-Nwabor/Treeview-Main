@@ -20,7 +20,7 @@ export default {};
   text-decoration: none;
   font-family: "Cambria", "Cochin", Georgia, Times, "Times New Roman", serif;
   color: black;
-  margin: 30px;
+  margin-left: 30px;
   font-size: 24px;
   padding: 10px;
 }

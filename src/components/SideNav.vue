@@ -24,12 +24,13 @@
 
 <script>
 import de from "@/locales/de.json";
-// import ChildrenNav from "@/components/ChildrenNav.vue";
 export default {
   props: ["data", "parentKey"],
-  components: {
-    // ChildrenNav,
-  },
+  // props: {
+  //   data: { type: Object, required: true },
+  //   parentKey: { type: String, required: true },
+  // },
+
   data() {
     return {
       myData: [],
@@ -64,7 +65,7 @@ export default {
           });
         }
       } else {
-        //check if index already exsists in the list then added it else remove it
+        //check if index already exsists in the list then added it, else remove it
         if (this.OpenList.includes(key)) {
           this.OpenList.splice(this.OpenList.indexOf(key), 1);
         } else {
@@ -86,7 +87,6 @@ export default {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
-  margin-left: 6px;
 }
 
 .side-btn {
@@ -103,6 +103,9 @@ export default {
 
 .side-btn:hover {
   color: rgb(221, 216, 216);
+  background-color: rgba(47, 48, 48, 0.3);
+  padding-left: 10px;
+  border-radius: 20px;
 }
 
 .hidden {

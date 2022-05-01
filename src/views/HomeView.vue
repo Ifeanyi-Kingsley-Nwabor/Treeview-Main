@@ -4,15 +4,15 @@
     <div class="content">
       <div class="display-container">
         <label class="label">DE</label>
-        <h1 :class="$store.state.DeValue ? 'display' : ''">
+        <h4 :class="$store.state.DeValue ? 'display' : ''">
           {{ $store.state.DeValue }}
-        </h1>
+        </h4>
       </div>
       <div class="display-container">
         <label class="label">EN</label>
-        <h1 :class="$store.state.DeValue ? 'display' : ''">
+        <h4 :class="$store.state.DeValue ? 'display' : ''">
           {{ $store.state.EnValue }}
-        </h1>
+        </h4>
       </div>
     </div>
   </div>
@@ -39,7 +39,7 @@ export default {
 .home {
   display: grid;
   grid-template-columns: 1.5fr 4.5fr;
-  background-color: teal;
+  background-color: rgba(71, 83, 88, 0.5);
 }
 .content {
   background-color: white;
@@ -64,7 +64,7 @@ export default {
 }
 
 .display {
-  background-color: azure;
+  background-color: rgba(177, 179, 179, 0.3);
   color: rgb(49, 48, 48);
   padding: 30px;
   margin: 30px;
