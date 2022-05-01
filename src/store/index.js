@@ -1,14 +1,19 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
 
 export default createStore({
-  state: {
+  state() {
+    return {
+      EnValue: "",
+      DeValue: "",
+    };
   },
-  getters: {
-  },
+  getters: {},
   mutations: {
+    AddValue(state, payload) {
+      state.EnValue = payload.EnValue;
+      state.DeValue = payload.DeValue;
+    },
   },
-  actions: {
-  },
-  modules: {
-  }
-})
+  actions: {},
+  modules: {},
+});

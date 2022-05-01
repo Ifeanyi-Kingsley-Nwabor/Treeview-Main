@@ -1,5 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="hello">
+    <h4>This is an assessment task.</h4>
+    <p>Learn <a href="https://vuejs.org/">Vue.js</a></p>
   </div>
 </template>
