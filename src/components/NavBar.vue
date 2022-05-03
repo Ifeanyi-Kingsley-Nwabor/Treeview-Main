@@ -1,6 +1,6 @@
 <template>
   <nav class="nav">
-    <router-link class="nav-link" to="/">
+    <router-link to="/">
       <img alt="Tree logo" src="../assets/tree.png"
     /></router-link>
     <router-link class="nav-link" to="/">Home</router-link> |
@@ -31,5 +31,7 @@ export default {};
 img {
   width: 50px;
   cursor: pointer;
+  -webkit-box-reflect: below 0px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
 }
 </style>
