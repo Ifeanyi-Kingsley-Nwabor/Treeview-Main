@@ -19,7 +19,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import SideNav from "@/components/SideNav.vue";
 import en from "@/locales/en.json";
 

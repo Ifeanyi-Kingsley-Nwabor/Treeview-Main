@@ -1,13 +1,14 @@
 <template>
   <div class="sidebar">
     <ul style="list-style: none" class="menu-items">
-      <li
-        v-for="(item, key, index) in myData"
-        :key="index"
-        active-class="active"
-        exact
-        class="side-btn"
-      >
+      <li v-for="(item, key, index) in myData" :key="index" class="side-btn">
+        <span
+          v-if="typeof item === 'object'"
+          class="type icon"
+          @click="GetValue(item, key)"
+          >{{ isExpanded(key) ? "&#9660;" : "&#9658;" }}</span
+        >
+
         <span @click="GetValue(item, key)" class="link-container">{{
           key
         }}</span>
@@ -24,6 +25,7 @@
 
 <script>
 import de from "@/locales/de.json";
+
 export default {
   props: ["data", "parentKey"],
   // props: {
@@ -47,6 +49,7 @@ export default {
       console.log(e);
     }
   },
+
   methods: {
     GetValue(item, key) {
       //check if item is not object then get value else open collapse
@@ -57,7 +60,6 @@ export default {
             EnValue: item,
             DeValue: this.myData1[this.parentKey][key],
           });
-          // console.log(this.myData1[this.parentKey][key]);
         } catch (err) {
           this.$store.commit("AddValue", {
             EnValue: item,
@@ -72,6 +74,9 @@ export default {
           this.OpenList.push(key);
         }
       }
+    },
+    isExpanded(key) {
+      return this.OpenList.indexOf(key) !== -1;
     },
   },
 };
@@ -103,12 +108,17 @@ export default {
 
 .side-btn:hover {
   color: rgb(221, 216, 216);
-  /* background-color: rgba(47, 48, 48, 0.3); */
   padding-left: 10px;
   border-radius: 20px;
 }
 
 .hidden {
   display: none;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+.icon {
+  padding-right: 5px;
 }
 </style>
