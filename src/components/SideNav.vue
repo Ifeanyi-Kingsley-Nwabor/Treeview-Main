@@ -119,6 +119,6 @@ export default {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 .icon {
-  padding-right: 5px;
+  margin-right: 5px;
 }
 </style>

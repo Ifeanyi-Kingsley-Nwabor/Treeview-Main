@@ -2,7 +2,12 @@
   <NavBar />
   <div class="title"><h3>i18n Treeview Assessment</h3></div>
   <div id="app">
-    <router-view />
+    <router-view v-slot="slotProps">
+      <transition name="routes" mode="out-in">
+        <component :is="slotProps.Component"></component>
+      </transition>
+    </router-view>
+    <!-- <router-view /> -->
   </div>
 </template>
 
@@ -35,5 +40,23 @@ body {
   font-size: 24px;
   margin-top: 10px;
   text-align: center;
+}
+
+.routes-enter-from,
+.routes-leave-to {
+  opacity: 0;
+}
+
+.routes-enter-active {
+  transition: opacity 0.2s ease-out;
+}
+
+.routes-leave-active {
+  transition: opacity 0.2s ease-in;
+}
+
+.routes-enter-to,
+.routes-leave-from {
+  opacity: 1;
 }
 </style>
